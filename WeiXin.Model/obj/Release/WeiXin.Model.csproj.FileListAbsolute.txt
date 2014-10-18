@@ -1,0 +1,5 @@
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Model\bin\Release\WeiXin.Model.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Model\bin\Release\WeiXin.Model.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Model\obj\Release\WeiXin.Model.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Model\obj\Release\WeiXin.Model.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Model\obj\Release\WeiXin.Model.csprojResolveAssemblyReference.cache

@@ -1,0 +1,10 @@
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Release\WeiXin.DAL.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Release\WeiXin.DAL.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Release\WeiXin.Common.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Release\WeiXin.Model.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Release\WeiXin.Common.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Release\WeiXin.Model.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\obj\Release\WeiXin.DAL.csprojResolveAssemblyReference.cache
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\obj\Release\WeiXin.DAL.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\obj\Release\WeiXin.DAL.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Release\log4net.dll
