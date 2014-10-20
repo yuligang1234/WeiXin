@@ -1,0 +1,4 @@
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Model\bin\Debug\WeiXin.Tools.Model.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Model\bin\Debug\WeiXin.Tools.Model.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Model\obj\Debug\WeiXin.Tools.Model.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Model\obj\Debug\WeiXin.Tools.Model.pdb

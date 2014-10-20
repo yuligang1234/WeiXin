@@ -1,0 +1,5 @@
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Common\bin\Debug\WeiXin.Common.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Common\bin\Debug\WeiXin.Common.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Common\bin\Debug\log4net.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Common\obj\Debug\WeiXin.Common.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Common\obj\Debug\WeiXin.Common.pdb

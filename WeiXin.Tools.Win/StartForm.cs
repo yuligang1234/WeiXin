@@ -1,7 +1,10 @@
 ﻿
 using System;
+using System.Web;
+using System.Web.Caching;
 using System.Windows.Forms;
 using WeiXin.Tools.Common;
+using WeiXin.Tools.DAL;
 using WeiXin.Tools.Model;
 
 namespace WeiXin.Tools.Win
@@ -41,9 +44,17 @@ namespace WeiXin.Tools.Win
         /// Author  : 俞立钢
         /// Company : 绍兴标点电子技术有限公司
         /// Created : 2014-10-18 15:12:25
-        private delegate void DoUpAndDown();
+        private delegate void DoUpAndDown(string accessToken);
 
         #endregion
+
+        #region 变量
+
+        private readonly Cache _cacheBaseInfo = HttpRuntime.Cache;
+        private BaseInfo _baseInfo;
+
+        #endregion
+
 
         public StartForm()
         {
@@ -62,12 +73,36 @@ namespace WeiXin.Tools.Win
         /// Created : 2014-10-15 09:28:37
         private void LoadBaseXml()
         {
-            TxtUrl.Text = PublicFileds.Url.GetAppConfig();
-            TxtToken.Text = PublicFileds.Token.GetAppConfig();
-            TxtAppId.Text = PublicFileds.AppId.GetAppConfig();
-            TxtAppSecret.Text = PublicFileds.AppSecret.GetAppConfig();
-            TxtAccessToken.Text = PublicFileds.AccessToken.GetAppConfig();
+            BaseInfo info = BaseInfoDao.SelectBaseInfo();
+            //缓存数据
+            _cacheBaseInfo.Insert(PublicFileds.BaseInfo, info);
+            TxtUrl.Text = info.Url;
+            TxtToken.Text = info.Token;
+            TxtAppId.Text = info.Appid;
+            TxtAppSecret.Text = info.Appsecret;
+            TxtAccessToken.Text = info.AccessToken;
         }
+
+        #region 缓存
+
+        /// <summary>
+        ///  获取缓存实体类
+        /// </summary>
+        /// Author  : 俞立钢
+        /// Company : 绍兴标点电子技术有限公司
+        /// Created : 2014-10-20 12:36:39
+        private BaseInfo GetBaseInfo()
+        {
+            _baseInfo = (BaseInfo)_cacheBaseInfo.Get(PublicFileds.BaseInfo);
+            if (_baseInfo.Id > 0)
+            {
+                _baseInfo = BaseInfoDao.SelectBaseInfo();
+            }
+            return _baseInfo;
+        }
+
+        #endregion
+
 
         #region 配置信息
 
@@ -86,10 +121,21 @@ namespace WeiXin.Tools.Win
             }
             else
             {
-                PublicFileds.Url.SaveAppConfig(TxtUrl.Text);
-                PublicFileds.Token.SaveAppConfig(TxtToken.Text);
-                PublicFileds.AppId.SaveAppConfig(TxtAppId.Text);
-                PublicFileds.AppSecret.SaveAppConfig(TxtAppSecret.Text);
+                _baseInfo = new BaseInfo();
+                _baseInfo.Id = GetBaseInfo().Id;
+                _baseInfo.Url = TxtUrl.Text;
+                _baseInfo.Token = TxtToken.Text;
+                _baseInfo.Appid = TxtAppId.Text;
+                _baseInfo.Appsecret = TxtAppSecret.Text;
+                if (BaseInfoDao.UpdateBaseInfo(_baseInfo))
+                {
+                    MessageBox.Show("保存成功！");
+                    //更新缓存
+                    _cacheBaseInfo.Remove(PublicFileds.BaseInfo);
+                    _cacheBaseInfo.Insert(PublicFileds.BaseInfo, BaseInfoDao.SelectBaseInfo(_baseInfo.Id));
+                    return;
+                }
+                MessageBox.Show("保存失败！");
             }
         }
 
@@ -101,8 +147,9 @@ namespace WeiXin.Tools.Win
         /// Created : 2014-10-15 10:09:03
         private void BtnAccessToken_Click(object sender, EventArgs e)
         {
+            _baseInfo = GetBaseInfo();
             //判access_token是否过期
-            if (!PublicFun.JudgeAccessToken())
+            if (!PublicFun.JudgeAccessToken(_baseInfo.StartDateTime, _baseInfo.EndDateTime))
             {
                 MessageBox.Show("该access_token没有过期，不需要重新获取！");
                 return;
@@ -135,18 +182,25 @@ namespace WeiXin.Tools.Win
         /// Created : 2014-10-15 15:01:17
         private void RequestAccessToken()
         {
-            string url = string.Format("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={0}&secret={1}", PublicFileds.AppId.GetAppConfig(), PublicFileds.AppSecret.GetAppConfig());
+            _baseInfo = GetBaseInfo();
+            string url = string.Format("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={0}&secret={1}", _baseInfo.Appid, _baseInfo.Appsecret);
             string json = PublicFun.RequestGetData(url);
             AccessTokens tokens = json.ResolveJson();
             if (tokens.access_token != null)
             {
                 //获取成功，写入信息
                 TxtAccessToken.Text = tokens.access_token;
+                BaseInfo info = new BaseInfo();
                 DateTime start = DateTime.Now;
-                DateTime end = start.AddSeconds(Convert.ToDouble(PublicFileds.TimeSpace.GetAppConfig()));
-                PublicFileds.AccessToken.SaveAppConfig(TxtAccessToken.Text);
-                PublicFileds.StartDateTime.SaveAppConfig(start.ToString(""));
-                PublicFileds.EndDateTime.SaveAppConfig(end.ToString(""));
+                DateTime end = start.AddSeconds(Convert.ToDouble(_baseInfo.TimeSpace));
+                info.Id = _baseInfo.Id;
+                info.StartDateTime = start.ToString("yyyy-MM-dd HH:mm:ss");
+                info.EndDateTime = end.ToString("yyyy-MM-dd HH:mm:ss");
+                info.AccessToken = TxtAccessToken.Text;
+                BaseInfoDao.UpdateBaseInfo(info);
+                //更新缓存
+                _cacheBaseInfo.Remove(PublicFileds.BaseInfo);
+                _cacheBaseInfo.Insert(PublicFileds.BaseInfo, BaseInfoDao.SelectBaseInfo(info.Id));
             }
             else
             {
@@ -192,14 +246,16 @@ namespace WeiXin.Tools.Win
         /// Created : 2014-10-16 10:16:33
         private void BtnSelect_Click(object sender, EventArgs e)
         {
-            string accessToken = PublicFileds.AccessToken.GetAppConfig();
+            //获取数据
+            _baseInfo = GetBaseInfo();
+            string accessToken = _baseInfo.AccessToken;
             if (string.IsNullOrEmpty(accessToken))
             {
                 MessageBox.Show("请先获取Access_Token！");
             }
             else
             {
-                if (!PublicFun.JudgeAccessToken())
+                if (!PublicFun.JudgeAccessToken(_baseInfo.StartDateTime, _baseInfo.EndDateTime))
                 {
                     ShowPrgSelect();
                     DoSelectCustomMenu selectCustomMenu = SelectMenu;
@@ -276,14 +332,15 @@ namespace WeiXin.Tools.Win
         /// Created : 2014-10-16 10:51:11
         private void BtnCreate_Click(object sender, EventArgs e)
         {
-            string accessToken = PublicFileds.AccessToken.GetAppConfig();
+            _baseInfo = GetBaseInfo();
+            string accessToken = _baseInfo.AccessToken;
             if (string.IsNullOrEmpty(accessToken))
             {
                 MessageBox.Show("请先获取Access_Token！");
             }
             else
             {
-                if (!PublicFun.JudgeAccessToken())
+                if (!PublicFun.JudgeAccessToken(_baseInfo.StartDateTime, _baseInfo.EndDateTime))
                 {
                     if (string.IsNullOrEmpty(MenuCreate.Text))
                     {
@@ -387,19 +444,20 @@ namespace WeiXin.Tools.Win
         /// Created : 2014-10-18 11:07:34
         private void BtnUpload_Click(object sender, EventArgs e)
         {
+            _baseInfo = GetBaseInfo();
             if (string.IsNullOrEmpty(TxtUploadUrl.Text))
             {
                 MessageBox.Show("请先选择需要上传的多媒体文件！");
                 return;
             }
-            if (PublicFun.JudgeAccessToken())
+            if (PublicFun.JudgeAccessToken(_baseInfo.StartDateTime, _baseInfo.EndDateTime))
             {
                 MessageBox.Show("Access_Token已经过期，请重新获取！");
                 return;
             }
             ShowPrgUpload();
             DoUpAndDown upAndDown = DoUploadFile;
-            upAndDown.BeginInvoke(AsyncCallbackUpload, upAndDown);
+            upAndDown.BeginInvoke(_baseInfo.AccessToken, AsyncCallbackUpload, upAndDown);
         }
 
         /// <summary>
@@ -408,9 +466,9 @@ namespace WeiXin.Tools.Win
         /// Author  : 俞立钢
         /// Company : 绍兴标点电子技术有限公司
         /// Created : 2014-10-18 15:14:19
-        private void DoUploadFile()
+        private void DoUploadFile(string accessToken)
         {
-            string httpUrl = string.Format("http://file.api.weixin.qq.com/cgi-bin/media/upload?access_token={0}&type={1}", PublicFileds.AccessToken.GetAppConfig(), "image");
+            string httpUrl = string.Format("http://file.api.weixin.qq.com/cgi-bin/media/upload?access_token={0}&type={1}", accessToken, "image");
             TxtUploadResult.Text = PublicFun.RequestUpDownData(httpUrl, HttpMethod.Post, TxtUploadUrl.Text);
         }
 

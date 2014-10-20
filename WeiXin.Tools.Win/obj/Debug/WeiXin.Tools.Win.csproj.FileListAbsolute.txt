@@ -1,0 +1,17 @@
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\bin\Debug\微信工具.exe
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\bin\Debug\微信工具.exe.config
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\bin\Debug\Newtonsoft.Json.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\bin\Debug\System.Data.SQLite.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\bin\Debug\WeiXin.Tools.Common.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\bin\Debug\WeiXin.Tools.DAL.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\bin\Debug\WeiXin.Tools.Model.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\bin\Debug\WeiXin.Tools.Common.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\bin\Debug\WeiXin.Tools.DAL.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\bin\Debug\WeiXin.Tools.Model.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\obj\Debug\WeiXin.Tools.Win.csprojResolveAssemblyReference.cache
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\obj\Debug\WeiXin.Tools.Win.BaseForm.resources
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\obj\Debug\WeiXin.Tools.Win.Properties.Resources.resources
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\obj\Debug\WeiXin.Tools.Win.StartForm.resources
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\obj\Debug\WeiXin.Tools.Win.csproj.GenerateResource.Cache
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\obj\Debug\微信工具.exe
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\obj\Debug\微信工具.pdb

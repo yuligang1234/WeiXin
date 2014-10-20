@@ -198,13 +198,13 @@ namespace WeiXin.Tools.Common
         /// <summary>
         ///  判断access_token是否过期
         /// </summary>
+        /// <param name="startDateTime">开始时间</param>
+        /// <param name="endDateTime">结束时间</param>
         /// Author  : 俞立钢
         /// Company : 绍兴标点电子技术有限公司
-        /// Created : 2014-10-18 11:21:29
-        public static bool JudgeAccessToken()
+        /// Created : 2014-10-20 11:12:05
+        public static bool JudgeAccessToken(string startDateTime, string endDateTime)
         {
-            string startDateTime = PublicFileds.StartDateTime.GetAppConfig();
-            string endDateTime = PublicFileds.EndDateTime.GetAppConfig();
             //没有过期，不需要重新获取
             if (!string.IsNullOrEmpty(startDateTime) && !string.IsNullOrEmpty(endDateTime))
             {

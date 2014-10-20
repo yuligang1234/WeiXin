@@ -47,9 +47,14 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Data.SQLite, Version=1.0.94.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Printing" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -112,31 +117,17 @@
       <Project>{41e332d9-f977-427d-bb3e-b30cc7c91b2e}</Project>
       <Name>WeiXin.Tools.Common</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WeiXin.Tools.DAL\WeiXin.Tools.DAL.csproj">
+      <Project>{fbd56b11-b26c-4532-ac06-0b736f081cb7}</Project>
+      <Name>WeiXin.Tools.DAL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WeiXin.Tools.Model\WeiXin.Tools.Model.csproj">
       <Project>{e8e0b64c-7840-4f67-8892-0da48b2e9fe3}</Project>
       <Name>WeiXin.Tools.Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <COMReference Include="AxChinaExcelLib">
-      <Guid>{D3439CBA-E2C3-11D3-8C5C-00001C531F9C}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>aximp</WrapperTool>
-      <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="ChinaExcelLib">
-      <Guid>{D3439CBA-E2C3-11D3-8C5C-00001C531F9C}</Guid>
-      <VersionMajor>2</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-  </ItemGroup>
-  <ItemGroup>
+    <Folder Include="Common\" />
     <Folder Include="Upload\Image\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

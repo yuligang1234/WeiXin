@@ -1,0 +1,10 @@
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Debug\WeiXin.DAL.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Debug\WeiXin.DAL.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Debug\WeiXin.Common.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Debug\WeiXin.Model.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Debug\log4net.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Debug\WeiXin.Common.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Debug\WeiXin.Model.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\obj\Debug\WeiXin.DAL.csprojResolveAssemblyReference.cache
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\obj\Debug\WeiXin.DAL.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\obj\Debug\WeiXin.DAL.pdb

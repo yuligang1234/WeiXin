@@ -1,0 +1,13 @@
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WindowsFormsApplication1\bin\Debug\超级报表生成图片.exe
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WindowsFormsApplication1\bin\Debug\超级报表生成图片.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WindowsFormsApplication1\bin\Debug\Interop.ChinaExcelLib.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WindowsFormsApplication1\bin\Debug\AxInterop.ChinaExcelLib.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WindowsFormsApplication1\obj\Debug\Interop.ChinaExcelLib.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WindowsFormsApplication1\obj\Debug\AxInterop.ChinaExcelLib.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.ResolveComReference.cache
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.BaseForm.resources
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WindowsFormsApplication1\obj\Debug\超级报表生成图片.exe
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WindowsFormsApplication1\obj\Debug\超级报表生成图片.pdb

@@ -1,0 +1,6 @@
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Helper\bin\Debug\WeiXin.Tools.Helper.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Helper\bin\Debug\WeiXin.Tools.Helper.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Helper\bin\Debug\System.Data.SQLite.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Helper\obj\Debug\WeiXin.Tools.Helper.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Helper\obj\Debug\WeiXin.Tools.Helper.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Helper\obj\Debug\WeiXin.Tools.Helper.csprojResolveAssemblyReference.cache

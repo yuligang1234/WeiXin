@@ -66,7 +66,7 @@ namespace WeiXin.DAL
         /// Created : 2014-10-13 16:09:53
         public static void ReplyScanCodeWaitmsg(Dictionary<string, string> model)
         {
-            string value = model.ReadKey("Content");
+            string value = model.ReadKey("ScanCodeInfo");
             string content = string.Format("项目编号：{0};\n验收状态：{1};\n验收结果：{2};\n报表查看：<a href='{3}'>点击查看</a>", value.Substring(6), "完成", "通过", "http://www.sxajj.gov.cn/1.jpg");
             ProduceText(model, content);
         }

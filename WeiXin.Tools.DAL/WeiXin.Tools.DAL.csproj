@@ -32,6 +32,10 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.94.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\System.Data.SQLite.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,7 +43,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseInfoDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helper\SqLiteHelper.cs" />
+    <Compile Include="Helper\SqlMapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WeiXin.Tools.Common\WeiXin.Tools.Common.csproj">
+      <Project>{41e332d9-f977-427d-bb3e-b30cc7c91b2e}</Project>
+      <Name>WeiXin.Tools.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WeiXin.Tools.Model\WeiXin.Tools.Model.csproj">
+      <Project>{e8e0b64c-7840-4f67-8892-0da48b2e9fe3}</Project>
+      <Name>WeiXin.Tools.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
