@@ -5,6 +5,14 @@ namespace WeiXin.Tools.Common
     {
 
         /// <summary>
+        ///  微信帐号
+        /// </summary>
+        /// Author  : 俞立钢
+        /// Company : 绍兴标点电子技术有限公司
+        /// Created : 2014-10-23 16:29:26
+        public static string UserName = "zlb218@163.com";
+
+        /// <summary>
         ///  服务器地址
         /// </summary>
         /// Author  : 俞立钢

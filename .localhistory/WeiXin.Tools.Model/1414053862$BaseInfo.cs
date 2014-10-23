@@ -88,8 +88,8 @@ namespace WeiXin.Tools.Model
         /// <summary>
         /// 微信帐号
         /// </summary>
-        private string _userName;
-        public string UserName
+        private int _userName;
+        public int UserName
         {
             get { return _userName; }
             set { _userName = value; }

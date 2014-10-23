@@ -61,6 +61,7 @@ namespace WeiXin.Tools.Win
             //应用皮肤
             ApplySkin("McSkin");
             InitializeComponent();
+            PublicFileds.UserName = cobUserName.SelectedText;
             LoadBaseXml();
             CheckForIllegalCrossThreadCalls = false;//如果不设置，会报线程不能调用控件的错误
         }
@@ -103,6 +104,7 @@ namespace WeiXin.Tools.Win
         }
 
         #endregion
+
 
         #region 配置信息
 
@@ -155,7 +157,6 @@ namespace WeiXin.Tools.Win
                 return;
             }
             ShowProgress();
-            TxtAccessToken.Text = "";
             DoRequestAccessToken invote = RequestAccessToken;
             invote.BeginInvoke(AsyncCallback, invote);
         }
@@ -525,7 +526,7 @@ namespace WeiXin.Tools.Win
         /// Created : 2014-10-23 16:34:33
         private void cobUserName_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PublicFileds.UserName = cobUserName.SelectedItem.ToString();
+            PublicFileds.UserName = cobUserName.SelectedText;
             LoadBaseXml();
         }
 

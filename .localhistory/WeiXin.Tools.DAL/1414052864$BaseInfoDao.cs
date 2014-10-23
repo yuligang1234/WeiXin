@@ -71,13 +71,12 @@ namespace WeiXin.Tools.DAL
         /// <summary>
         ///  查询
         /// </summary>
-        /// <param name="userName">微信帐号</param>
         /// Author  : 俞立钢
         /// Company : 绍兴标点电子技术有限公司
-        /// Created : 2014-10-23 16:27:44
-        public static BaseInfo SelectBaseInfo(string userName)
+        /// Created : 2014-10-20 13:24:10
+        public static BaseInfo SelectBaseInfo()
         {
-            string sql = string.Format("select * from Base_Info where UserName='{0}'", userName);
+            string sql = string.Format("select * from Base_Info limit 1");
             return SqLiteHelper.GetEnumerable<BaseInfo>(sql);
         }
 

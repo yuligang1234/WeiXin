@@ -77,7 +77,7 @@ namespace WeiXin.Tools.DAL
         /// Created : 2014-10-23 16:27:44
         public static BaseInfo SelectBaseInfo(string userName)
         {
-            string sql = string.Format("select * from Base_Info where UserName='{0}'", userName);
+            string sql = string.Format("select * from Base_Info limit 1");
             return SqLiteHelper.GetEnumerable<BaseInfo>(sql);
         }
 

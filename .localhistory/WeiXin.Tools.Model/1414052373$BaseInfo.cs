@@ -12,7 +12,7 @@ namespace WeiXin.Tools.Model
         {
             get { return _id; }
             set { _id = value; }
-        }        
+        }
         /// <summary>
         /// 服务器URL
         /// </summary>		
@@ -84,15 +84,6 @@ namespace WeiXin.Tools.Model
         {
             get { return _timespace; }
             set { _timespace = value; }
-        }
-        /// <summary>
-        /// 微信帐号
-        /// </summary>
-        private string _userName;
-        public string UserName
-        {
-            get { return _userName; }
-            set { _userName = value; }
         }
 
     }

@@ -185,6 +185,7 @@ namespace WeiXin.Web.Controllers
             tmpStr = FormsAuthentication.HashPasswordForStoringInConfigFile(tmpStr, "SHA1");
             if (tmpStr != null)
             {
+                OperateXml.ResponseEnd(signature);
                 tmpStr = tmpStr.ToLower();
                 if (tmpStr == signature)
                 {

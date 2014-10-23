@@ -61,6 +61,7 @@ namespace WeiXin.Tools.Win
             //应用皮肤
             ApplySkin("McSkin");
             InitializeComponent();
+            PublicFileds.UserName = cobUserName.SelectedText;
             LoadBaseXml();
             CheckForIllegalCrossThreadCalls = false;//如果不设置，会报线程不能调用控件的错误
         }
@@ -73,9 +74,8 @@ namespace WeiXin.Tools.Win
         /// Created : 2014-10-15 09:28:37
         private void LoadBaseXml()
         {
-            BaseInfo info = BaseInfoDao.SelectBaseInfo(PublicFileds.UserName);
+            BaseInfo info = BaseInfoDao.SelectBaseInfo();
             //缓存数据
-            _cacheBaseInfo.Remove(PublicFileds.BaseInfo);
             _cacheBaseInfo.Insert(PublicFileds.BaseInfo, info);
             TxtUrl.Text = info.Url;
             TxtToken.Text = info.Token;
@@ -97,12 +97,13 @@ namespace WeiXin.Tools.Win
             _baseInfo = (BaseInfo)_cacheBaseInfo.Get(PublicFileds.BaseInfo);
             if (_baseInfo.Id > 0)
             {
-                _baseInfo = BaseInfoDao.SelectBaseInfo(PublicFileds.UserName);
+                _baseInfo = BaseInfoDao.SelectBaseInfo();
             }
             return _baseInfo;
         }
 
         #endregion
+
 
         #region 配置信息
 
@@ -155,7 +156,6 @@ namespace WeiXin.Tools.Win
                 return;
             }
             ShowProgress();
-            TxtAccessToken.Text = "";
             DoRequestAccessToken invote = RequestAccessToken;
             invote.BeginInvoke(AsyncCallback, invote);
         }
@@ -516,18 +516,6 @@ namespace WeiXin.Tools.Win
 
 
         #endregion
-
-        /// <summary>
-        ///  微信帐号选择事件
-        /// </summary>
-        /// Author  : 俞立钢
-        /// Company : 绍兴标点电子技术有限公司
-        /// Created : 2014-10-23 16:34:33
-        private void cobUserName_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            PublicFileds.UserName = cobUserName.SelectedItem.ToString();
-            LoadBaseXml();
-        }
 
 
 

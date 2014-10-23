@@ -104,6 +104,7 @@ namespace WeiXin.Tools.Win
 
         #endregion
 
+
         #region 配置信息
 
         /// <summary>
@@ -155,7 +156,6 @@ namespace WeiXin.Tools.Win
                 return;
             }
             ShowProgress();
-            TxtAccessToken.Text = "";
             DoRequestAccessToken invote = RequestAccessToken;
             invote.BeginInvoke(AsyncCallback, invote);
         }

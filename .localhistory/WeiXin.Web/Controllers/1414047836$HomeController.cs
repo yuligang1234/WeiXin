@@ -163,7 +163,9 @@ namespace WeiXin.Web.Controllers
             string nonce = Request.QueryString["nonce"];
             if (CheckSignature(token, signature, timestamp, nonce))
             {
-                OperateXml.ResponseEnd(echoString);
+                //OperateXml.ResponseEnd(echoString);
+                System.Web.HttpContext.Current.Response.Write(echoString);
+                System.Web.HttpContext.Current.Response.End();
             }
         }
 
@@ -185,6 +187,7 @@ namespace WeiXin.Web.Controllers
             tmpStr = FormsAuthentication.HashPasswordForStoringInConfigFile(tmpStr, "SHA1");
             if (tmpStr != null)
             {
+                OperateXml.ResponseEnd(signature);
                 tmpStr = tmpStr.ToLower();
                 if (tmpStr == signature)
                 {

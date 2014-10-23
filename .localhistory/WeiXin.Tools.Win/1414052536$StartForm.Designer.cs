@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
             this.xtraTabControl = new DevExpress.XtraTab.XtraTabControl();
             this.TagBaseInfo = new DevExpress.XtraTab.XtraTabPage();
-            this.GrbUsers = new DevExpress.XtraEditors.GroupControl();
-            this.cobUserName = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.progressPanel1 = new DevExpress.XtraWaitForm.ProgressPanel();
             this.GrbGetAccessToken = new DevExpress.XtraEditors.GroupControl();
             this.BtnAccessToken = new DevExpress.XtraEditors.SimpleButton();
@@ -73,9 +70,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl)).BeginInit();
             this.xtraTabControl.SuspendLayout();
             this.TagBaseInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GrbUsers)).BeginInit();
-            this.GrbUsers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cobUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrbGetAccessToken)).BeginInit();
             this.GrbGetAccessToken.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TxtAccessToken.Properties)).BeginInit();
@@ -118,7 +112,6 @@
             // TagBaseInfo
             // 
             this.TagBaseInfo.AutoScroll = true;
-            this.TagBaseInfo.Controls.Add(this.GrbUsers);
             this.TagBaseInfo.Controls.Add(this.progressPanel1);
             this.TagBaseInfo.Controls.Add(this.GrbGetAccessToken);
             this.TagBaseInfo.Controls.Add(this.GrbDeveloperXml);
@@ -126,39 +119,6 @@
             this.TagBaseInfo.Name = "TagBaseInfo";
             this.TagBaseInfo.Size = new System.Drawing.Size(878, 533);
             this.TagBaseInfo.Text = "配置信息";
-            // 
-            // GrbUsers
-            // 
-            this.GrbUsers.Controls.Add(this.cobUserName);
-            this.GrbUsers.Controls.Add(this.labelControl8);
-            this.GrbUsers.Location = new System.Drawing.Point(13, 15);
-            this.GrbUsers.Name = "GrbUsers";
-            this.GrbUsers.Size = new System.Drawing.Size(849, 84);
-            this.GrbUsers.TabIndex = 4;
-            this.GrbUsers.Text = "帐号信息";
-            // 
-            // cobUserName
-            // 
-            this.cobUserName.EditValue = "zlb218@163.com";
-            this.cobUserName.Location = new System.Drawing.Point(81, 42);
-            this.cobUserName.Name = "cobUserName";
-            this.cobUserName.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cobUserName.Properties.Items.AddRange(new object[] {
-            "zlb218@163.com",
-            "3101143131@qq.com"});
-            this.cobUserName.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
-            this.cobUserName.Size = new System.Drawing.Size(221, 20);
-            this.cobUserName.TabIndex = 1;
-            this.cobUserName.SelectedIndexChanged += new System.EventHandler(this.cobUserName_SelectedIndexChanged);
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Location = new System.Drawing.Point(15, 45);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(60, 14);
-            this.labelControl8.TabIndex = 0;
-            this.labelControl8.Text = "微信帐号：";
             // 
             // progressPanel1
             // 
@@ -170,10 +130,10 @@
             this.progressPanel1.AppearanceDescription.Options.UseFont = true;
             this.progressPanel1.Caption = "获取access_token中......";
             this.progressPanel1.Description = "";
-            this.progressPanel1.Location = new System.Drawing.Point(13, 363);
+            this.progressPanel1.Location = new System.Drawing.Point(13, 307);
             this.progressPanel1.Name = "progressPanel1";
             this.progressPanel1.ShowDescription = false;
-            this.progressPanel1.Size = new System.Drawing.Size(849, 45);
+            this.progressPanel1.Size = new System.Drawing.Size(849, 52);
             this.progressPanel1.TabIndex = 3;
             this.progressPanel1.Text = "progressPanel1";
             this.progressPanel1.Visible = false;
@@ -183,7 +143,7 @@
             this.GrbGetAccessToken.Controls.Add(this.BtnAccessToken);
             this.GrbGetAccessToken.Controls.Add(this.TxtAccessToken);
             this.GrbGetAccessToken.Controls.Add(this.labelControl6);
-            this.GrbGetAccessToken.Location = new System.Drawing.Point(13, 410);
+            this.GrbGetAccessToken.Location = new System.Drawing.Point(13, 365);
             this.GrbGetAccessToken.Name = "GrbGetAccessToken";
             this.GrbGetAccessToken.Size = new System.Drawing.Size(849, 100);
             this.GrbGetAccessToken.TabIndex = 2;
@@ -222,7 +182,7 @@
             this.GrbDeveloperXml.Controls.Add(this.labelControl3);
             this.GrbDeveloperXml.Controls.Add(this.TxtAppId);
             this.GrbDeveloperXml.Controls.Add(this.labelControl4);
-            this.GrbDeveloperXml.Location = new System.Drawing.Point(13, 260);
+            this.GrbDeveloperXml.Location = new System.Drawing.Point(13, 201);
             this.GrbDeveloperXml.Name = "GrbDeveloperXml";
             this.GrbDeveloperXml.Size = new System.Drawing.Size(849, 100);
             this.GrbDeveloperXml.TabIndex = 1;
@@ -274,7 +234,7 @@
             this.GrbServerXml.Controls.Add(this.labelControl2);
             this.GrbServerXml.Controls.Add(this.TxtUrl);
             this.GrbServerXml.Controls.Add(this.labelControl1);
-            this.GrbServerXml.Location = new System.Drawing.Point(13, 131);
+            this.GrbServerXml.Location = new System.Drawing.Point(13, 51);
             this.GrbServerXml.Name = "GrbServerXml";
             this.GrbServerXml.Size = new System.Drawing.Size(849, 100);
             this.GrbServerXml.TabIndex = 0;
@@ -524,12 +484,12 @@
             // 
             // StartForm
             // 
+            this.Appearance.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Bold);
             this.Appearance.Options.UseFont = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 562);
             this.Controls.Add(this.xtraTabControl);
-            this.Font = new System.Drawing.Font("Britannic Bold", 9F, System.Drawing.FontStyle.Bold);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.HtmlText = "微信工具";
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -539,10 +499,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl)).EndInit();
             this.xtraTabControl.ResumeLayout(false);
             this.TagBaseInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GrbUsers)).EndInit();
-            this.GrbUsers.ResumeLayout(false);
-            this.GrbUsers.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cobUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GrbGetAccessToken)).EndInit();
             this.GrbGetAccessToken.ResumeLayout(false);
             this.GrbGetAccessToken.PerformLayout();
@@ -614,9 +570,6 @@
         private DevExpress.XtraEditors.TextEdit TxtUploadResult;
         private DevExpress.XtraEditors.TextEdit TxtUploadUrl;
         private DevExpress.XtraWaitForm.ProgressPanel PrgUpload;
-        private DevExpress.XtraEditors.GroupControl GrbUsers;
-        private DevExpress.XtraEditors.ComboBoxEdit cobUserName;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
 
 
 
