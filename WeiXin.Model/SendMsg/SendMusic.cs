@@ -42,7 +42,7 @@ namespace WeiXin.Model.SendMsg
         /// Author  : 俞立钢
         /// Company : 绍兴标点电子技术有限公司
         /// Created : 2014-10-10 11:09:30
-        public string ThumbMediaId { get; set; }
+        public int ThumbMediaId { get; set; }
 
     }
 }

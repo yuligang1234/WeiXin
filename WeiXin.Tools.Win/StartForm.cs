@@ -470,7 +470,7 @@ namespace WeiXin.Tools.Win
         private void DoUploadFile(string accessToken)
         {
             string httpUrl = string.Format("http://file.api.weixin.qq.com/cgi-bin/media/upload?access_token={0}&type={1}", accessToken, "image");
-            TxtUploadResult.Text = PublicFun.RequestUpDownData(httpUrl, HttpMethod.Post, TxtUploadUrl.Text);
+            TxtUploadResult.Text = PublicFun.RequestUploadFile(httpUrl, HttpMethod.Post.ToString(), TxtUploadUrl.Text);
         }
 
         /// <summary>

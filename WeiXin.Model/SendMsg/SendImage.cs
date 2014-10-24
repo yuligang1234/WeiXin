@@ -13,7 +13,7 @@ namespace WeiXin.Model.SendMsg
         /// Author  : 俞立钢
         /// Company : 绍兴标点电子技术有限公司
         /// Created : 2014-10-10 10:46:12
-        public int MediaId { get; set; }
+        public string MediaId { get; set; }
 
     }
 }

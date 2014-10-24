@@ -50,7 +50,7 @@ namespace WeiXin.DAL
         /// Author  : 俞立钢
         /// Company : 绍兴标点电子技术有限公司
         /// Created : 2014-10-10 11:00:22
-        public static string SendVoice(SendVioce model)
+        public static string SendVoice(SendVoice model)
         {
             return string.Format(@"<xml>
                                     <ToUserName><![CDATA[{0}]]></ToUserName>

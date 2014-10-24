@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\DLL\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,13 +43,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseModel.cs" />
+    <Compile Include="BaseMsg.cs" />
+    <Compile Include="MsgModel\MediaMsg.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SendMsg\SendImage.cs" />
     <Compile Include="SendMsg\SendMusic.cs" />
     <Compile Include="SendMsg\SendPicTxt.cs" />
     <Compile Include="SendMsg\SendText.cs" />
     <Compile Include="SendMsg\SendVideo.cs" />
-    <Compile Include="SendMsg\SendVioce.cs" />
+    <Compile Include="SendMsg\SendVoice.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

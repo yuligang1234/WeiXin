@@ -20,7 +20,7 @@ namespace WeiXin.Model.SendMsg
         /// Author  : 俞立钢
         /// Company : 绍兴标点电子技术有限公司
         /// Created : 2014-10-10 10:50:27
-        public int Title { get; set; }
+        public string Title { get; set; }
 
         /// <summary>
         ///  视频消息的描述
@@ -28,7 +28,7 @@ namespace WeiXin.Model.SendMsg
         /// Author  : 俞立钢
         /// Company : 绍兴标点电子技术有限公司
         /// Created : 2014-10-10 10:50:27
-        public Int64 Description { get; set; }
+        public string Description { get; set; }
 
     }
 }

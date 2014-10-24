@@ -8,3 +8,4 @@ E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\obj\Release\Wei
 E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\obj\Release\WeiXin.DAL.dll
 E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\obj\Release\WeiXin.DAL.pdb
 E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Release\log4net.dll
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.DAL\bin\Release\Newtonsoft.Json.dll

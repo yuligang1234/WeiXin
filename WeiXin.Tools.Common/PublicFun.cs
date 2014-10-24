@@ -4,6 +4,7 @@ using System.Configuration;
 using System.IO;
 using System.Net;
 using System.Text;
+using Newtonsoft.Json;
 using WeiXin.Tools.Model;
 
 namespace WeiXin.Tools.Common
@@ -187,7 +188,7 @@ namespace WeiXin.Tools.Common
         /// Created : 2014-10-15 13:50:14
         public static AccessTokens ResolveJson(this string json)
         {
-            AccessTokens tokens = Newtonsoft.Json.JsonConvert.DeserializeObject<AccessTokens>(json);
+            AccessTokens tokens = JsonConvert.DeserializeObject<AccessTokens>(json);
             return tokens;
         }
 
