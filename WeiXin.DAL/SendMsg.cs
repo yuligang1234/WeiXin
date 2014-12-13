@@ -236,7 +236,7 @@ namespace WeiXin.DAL
         }
 
         /// <summary>
-        ///  使用官方模版借口
+        ///  使用官方模版接口
         /// </summary>
         /// <param name="model">The model.</param>
         /// Author  : 俞立钢

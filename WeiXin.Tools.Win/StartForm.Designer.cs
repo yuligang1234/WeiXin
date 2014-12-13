@@ -34,7 +34,6 @@
             this.GrbUsers = new DevExpress.XtraEditors.GroupControl();
             this.cobUserName = new DevExpress.XtraEditors.ComboBoxEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.progressPanel1 = new DevExpress.XtraWaitForm.ProgressPanel();
             this.GrbGetAccessToken = new DevExpress.XtraEditors.GroupControl();
             this.BtnAccessToken = new DevExpress.XtraEditors.SimpleButton();
             this.TxtAccessToken = new DevExpress.XtraEditors.TextEdit();
@@ -51,8 +50,6 @@
             this.TxtUrl = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.TagCustomMenu = new DevExpress.XtraTab.XtraTabPage();
-            this.PrgCreate = new DevExpress.XtraWaitForm.ProgressPanel();
-            this.PrgSelect = new DevExpress.XtraWaitForm.ProgressPanel();
             this.BtnCreate = new DevExpress.XtraEditors.SimpleButton();
             this.BtnSelect = new DevExpress.XtraEditors.SimpleButton();
             this.GrbCreateCustomMenu = new DevExpress.XtraEditors.GroupControl();
@@ -62,7 +59,6 @@
             this.TagUpload = new DevExpress.XtraTab.XtraTabPage();
             this.GrbDownload = new DevExpress.XtraEditors.GroupControl();
             this.GrbUpload = new DevExpress.XtraEditors.GroupControl();
-            this.PrgUpload = new DevExpress.XtraWaitForm.ProgressPanel();
             this.BtnUpload = new DevExpress.XtraEditors.SimpleButton();
             this.BtnBrowser = new DevExpress.XtraEditors.SimpleButton();
             this.TxtUploadResult = new DevExpress.XtraEditors.TextEdit();
@@ -70,6 +66,7 @@
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.BtnImage = new DevExpress.XtraEditors.SimpleButton();
+            this.splashScreenManager1 = new DevExpress.XtraSplashScreen.SplashScreenManager(this, typeof(global::WeiXin.Tools.Win.WaitForm1), true, true);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl)).BeginInit();
             this.xtraTabControl.SuspendLayout();
             this.TagBaseInfo.SuspendLayout();
@@ -119,7 +116,6 @@
             // 
             this.TagBaseInfo.AutoScroll = true;
             this.TagBaseInfo.Controls.Add(this.GrbUsers);
-            this.TagBaseInfo.Controls.Add(this.progressPanel1);
             this.TagBaseInfo.Controls.Add(this.GrbGetAccessToken);
             this.TagBaseInfo.Controls.Add(this.GrbDeveloperXml);
             this.TagBaseInfo.Controls.Add(this.GrbServerXml);
@@ -159,24 +155,6 @@
             this.labelControl8.Size = new System.Drawing.Size(60, 14);
             this.labelControl8.TabIndex = 0;
             this.labelControl8.Text = "微信帐号：";
-            // 
-            // progressPanel1
-            // 
-            this.progressPanel1.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.progressPanel1.Appearance.Options.UseBackColor = true;
-            this.progressPanel1.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.progressPanel1.AppearanceCaption.Options.UseFont = true;
-            this.progressPanel1.AppearanceDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.progressPanel1.AppearanceDescription.Options.UseFont = true;
-            this.progressPanel1.Caption = "获取access_token中......";
-            this.progressPanel1.Description = "";
-            this.progressPanel1.Location = new System.Drawing.Point(13, 363);
-            this.progressPanel1.Name = "progressPanel1";
-            this.progressPanel1.ShowDescription = false;
-            this.progressPanel1.Size = new System.Drawing.Size(849, 45);
-            this.progressPanel1.TabIndex = 3;
-            this.progressPanel1.Text = "progressPanel1";
-            this.progressPanel1.Visible = false;
             // 
             // GrbGetAccessToken
             // 
@@ -313,8 +291,6 @@
             // TagCustomMenu
             // 
             this.TagCustomMenu.AutoScroll = true;
-            this.TagCustomMenu.Controls.Add(this.PrgCreate);
-            this.TagCustomMenu.Controls.Add(this.PrgSelect);
             this.TagCustomMenu.Controls.Add(this.BtnCreate);
             this.TagCustomMenu.Controls.Add(this.BtnSelect);
             this.TagCustomMenu.Controls.Add(this.GrbCreateCustomMenu);
@@ -323,44 +299,10 @@
             this.TagCustomMenu.Size = new System.Drawing.Size(878, 533);
             this.TagCustomMenu.Text = "自定义菜单";
             // 
-            // PrgCreate
-            // 
-            this.PrgCreate.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.PrgCreate.Appearance.Options.UseBackColor = true;
-            this.PrgCreate.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.PrgCreate.AppearanceCaption.Options.UseFont = true;
-            this.PrgCreate.AppearanceDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.PrgCreate.AppearanceDescription.Options.UseFont = true;
-            this.PrgCreate.Caption = "创建中......";
-            this.PrgCreate.Description = "";
-            this.PrgCreate.Location = new System.Drawing.Point(453, 488);
-            this.PrgCreate.Name = "PrgCreate";
-            this.PrgCreate.ShowDescription = false;
-            this.PrgCreate.Size = new System.Drawing.Size(350, 36);
-            this.PrgCreate.TabIndex = 12;
-            this.PrgCreate.Visible = false;
-            // 
-            // PrgSelect
-            // 
-            this.PrgSelect.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.PrgSelect.Appearance.Options.UseBackColor = true;
-            this.PrgSelect.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.PrgSelect.AppearanceCaption.Options.UseFont = true;
-            this.PrgSelect.AppearanceDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.PrgSelect.AppearanceDescription.Options.UseFont = true;
-            this.PrgSelect.Caption = "查询中......";
-            this.PrgSelect.Description = "";
-            this.PrgSelect.Location = new System.Drawing.Point(11, 488);
-            this.PrgSelect.Name = "PrgSelect";
-            this.PrgSelect.ShowDescription = false;
-            this.PrgSelect.Size = new System.Drawing.Size(350, 36);
-            this.PrgSelect.TabIndex = 11;
-            this.PrgSelect.Visible = false;
-            // 
             // BtnCreate
             // 
             this.BtnCreate.AllowFocus = false;
-            this.BtnCreate.Location = new System.Drawing.Point(812, 496);
+            this.BtnCreate.Location = new System.Drawing.Point(628, 496);
             this.BtnCreate.Name = "BtnCreate";
             this.BtnCreate.Size = new System.Drawing.Size(57, 23);
             this.BtnCreate.TabIndex = 10;
@@ -370,7 +312,7 @@
             // BtnSelect
             // 
             this.BtnSelect.AllowFocus = false;
-            this.BtnSelect.Location = new System.Drawing.Point(374, 496);
+            this.BtnSelect.Location = new System.Drawing.Point(155, 496);
             this.BtnSelect.Name = "BtnSelect";
             this.BtnSelect.Size = new System.Drawing.Size(57, 23);
             this.BtnSelect.TabIndex = 9;
@@ -433,7 +375,6 @@
             // 
             // GrbUpload
             // 
-            this.GrbUpload.Controls.Add(this.PrgUpload);
             this.GrbUpload.Controls.Add(this.BtnUpload);
             this.GrbUpload.Controls.Add(this.BtnBrowser);
             this.GrbUpload.Controls.Add(this.TxtUploadResult);
@@ -446,26 +387,9 @@
             this.GrbUpload.TabIndex = 0;
             this.GrbUpload.Text = "上传多媒体";
             // 
-            // PrgUpload
-            // 
-            this.PrgUpload.Appearance.BackColor = System.Drawing.Color.Transparent;
-            this.PrgUpload.Appearance.Options.UseBackColor = true;
-            this.PrgUpload.AppearanceCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.PrgUpload.AppearanceCaption.Options.UseFont = true;
-            this.PrgUpload.AppearanceDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.PrgUpload.AppearanceDescription.Options.UseFont = true;
-            this.PrgUpload.Caption = "上传中......";
-            this.PrgUpload.Description = "";
-            this.PrgUpload.Location = new System.Drawing.Point(20, 28);
-            this.PrgUpload.Name = "PrgUpload";
-            this.PrgUpload.ShowDescription = false;
-            this.PrgUpload.Size = new System.Drawing.Size(817, 48);
-            this.PrgUpload.TabIndex = 6;
-            this.PrgUpload.Visible = false;
-            // 
             // BtnUpload
             // 
-            this.BtnUpload.Location = new System.Drawing.Point(762, 141);
+            this.BtnUpload.Location = new System.Drawing.Point(763, 130);
             this.BtnUpload.Name = "BtnUpload";
             this.BtnUpload.Size = new System.Drawing.Size(75, 23);
             this.BtnUpload.TabIndex = 5;
@@ -474,7 +398,7 @@
             // 
             // BtnBrowser
             // 
-            this.BtnBrowser.Location = new System.Drawing.Point(762, 90);
+            this.BtnBrowser.Location = new System.Drawing.Point(763, 59);
             this.BtnBrowser.Name = "BtnBrowser";
             this.BtnBrowser.Size = new System.Drawing.Size(75, 23);
             this.BtnBrowser.TabIndex = 4;
@@ -483,7 +407,7 @@
             // 
             // TxtUploadResult
             // 
-            this.TxtUploadResult.Location = new System.Drawing.Point(120, 142);
+            this.TxtUploadResult.Location = new System.Drawing.Point(121, 131);
             this.TxtUploadResult.Name = "TxtUploadResult";
             this.TxtUploadResult.Properties.ReadOnly = true;
             this.TxtUploadResult.Size = new System.Drawing.Size(610, 20);
@@ -491,7 +415,7 @@
             // 
             // TxtUploadUrl
             // 
-            this.TxtUploadUrl.Location = new System.Drawing.Point(120, 91);
+            this.TxtUploadUrl.Location = new System.Drawing.Point(121, 60);
             this.TxtUploadUrl.Name = "TxtUploadUrl";
             this.TxtUploadUrl.Properties.ReadOnly = true;
             this.TxtUploadUrl.Size = new System.Drawing.Size(610, 20);
@@ -500,7 +424,7 @@
             // labelControl7
             // 
             this.labelControl7.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl7.Location = new System.Drawing.Point(30, 145);
+            this.labelControl7.Location = new System.Drawing.Point(31, 134);
             this.labelControl7.Name = "labelControl7";
             this.labelControl7.Size = new System.Drawing.Size(72, 14);
             this.labelControl7.TabIndex = 1;
@@ -509,7 +433,7 @@
             // labelControl5
             // 
             this.labelControl5.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
-            this.labelControl5.Location = new System.Drawing.Point(20, 94);
+            this.labelControl5.Location = new System.Drawing.Point(21, 63);
             this.labelControl5.Name = "labelControl5";
             this.labelControl5.Size = new System.Drawing.Size(72, 14);
             this.labelControl5.TabIndex = 0;
@@ -594,13 +518,10 @@
         private DevExpress.XtraEditors.LabelControl labelControl6;
         private DevExpress.XtraEditors.SimpleButton BtnAccessToken;
         private DevExpress.XtraEditors.SimpleButton BtnSave;
-        private DevExpress.XtraWaitForm.ProgressPanel progressPanel1;
         private DevExpress.XtraEditors.GroupControl GrbCreateCustomMenu;
         private DevExpress.XtraEditors.GroupControl GrbSelectCustomMenu;
         private DevExpress.XtraEditors.MemoEdit MenuSelect;
         private DevExpress.XtraEditors.MemoEdit MenuCreate;
-        private DevExpress.XtraWaitForm.ProgressPanel PrgCreate;
-        private DevExpress.XtraWaitForm.ProgressPanel PrgSelect;
         private DevExpress.XtraEditors.SimpleButton BtnCreate;
         private DevExpress.XtraEditors.SimpleButton BtnSelect;
         private DevExpress.XtraTab.XtraTabPage TagUpload;
@@ -613,10 +534,10 @@
         private DevExpress.XtraEditors.SimpleButton BtnBrowser;
         private DevExpress.XtraEditors.TextEdit TxtUploadResult;
         private DevExpress.XtraEditors.TextEdit TxtUploadUrl;
-        private DevExpress.XtraWaitForm.ProgressPanel PrgUpload;
         private DevExpress.XtraEditors.GroupControl GrbUsers;
         private DevExpress.XtraEditors.ComboBoxEdit cobUserName;
         private DevExpress.XtraEditors.LabelControl labelControl8;
+        private DevExpress.XtraSplashScreen.SplashScreenManager splashScreenManager1;
 
 
 

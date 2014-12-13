@@ -16,3 +16,4 @@ E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\obj\Debug
 E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\obj\Debug\WeiXin.Tools.Win.csproj.GenerateResource.Cache
 E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\obj\Debug\微信工具.exe
 E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\obj\Debug\微信工具.pdb
+E:\Napoleon\Asp.net\Webform\Work\标点\微信\WeiXin\WeiXin.Tools.Win\obj\Debug\WeiXin.Tools.Win.WaitForm1.resources
